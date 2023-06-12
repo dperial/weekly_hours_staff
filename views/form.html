@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">	
+		<link rel="stylesheet" href="../css/form.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+		<title>Create a neu Staff Member !</title>
+	</head>
+	<body>
+
+    <div class="container" style="margin-top: 40px;">
+
+        <form class="well form-horizontal" action="../api/staff/create.php" method="post"  id="contact_form">
+            <fieldset>
+
+            <!-- Form Name -->
+            <h3 style="text-align: center;font-weight: 600; padding-bottom: 20px;margin-bottom: 20px; border-bottom: 1px solid lightgrey ;">Create a new Staff member.</h3>
+
+            <!-- First Name Text input-->
+
+            <div class="col-md-6 form-group">
+            <label class="col-md-4 control-label">First Name</label>  
+            <div class="col-md-8 inputGroupContainer">
+            <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                </div>
+            </div>
+            </div>
+
+            <!-- Last Name Text input-->
+
+            <div class="col-md-6 form-group">
+            <label class="col-md-4 control-label" >Last Name</label> 
+                <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                </div>
+            </div>
+            </div>
+
+            <!-- Birthday Date Text input-->
+            <div class="col-md-6 form-group">
+                <label class="col-md-4 control-label" for="date">Birthday Date</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        <input name="birthday_date" placeholder="Start Date" class="form-control" id="birthday_date" type="date" data-date-format="yyyy-mm-dd">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Birthday Name Text input-->
+
+            <div class="col-md-6 form-group">
+                <label class="col-md-4 control-label" >Birthday Name</label> 
+                    <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input name="birthday_name" placeholder="Birthday Name" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Birthday Place Text input-->
+
+            <div class="col-md-6 form-group">
+                <label class="col-md-4 control-label">Birthday Place</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                        <input name="birthday_place" placeholder="Birthday Place" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gender radio checks -->
+            <div class="col-md-6 form-group">
+                <label class="col-md-4 control-label">Gender</label>
+                <div class="col-md-8">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="gender" value="m" /> Male
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="gender" value="w" /> Female
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Date Text input-->
+            <div class="col-md-6 form-group">
+            <label class="col-md-4 control-label" for="date">Start Date</label>  
+                <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    <input name="start_date" placeholder="Start Date" class="form-control" id="start_date" type="date">
+                </div>
+            </div>
+            </div>
+
+
+            <!-- End Date Text input-->
+
+            <!-- <div class="form-group">
+                <label class="control-label" for="date">Date</label>
+                <input class="form-control"  name="date" placeholder="MM/DD/YYY" type="text"/>
+            </div> -->
+            
+            <div class="col-md-6 form-group">
+                <label class="col-md-4 control-label" for="date">End Date</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        <input name="end_date" placeholder="End Date" class="form-control" id="end_date" type="date">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Hours Number input-->
+            
+            <!-- <div class="form-outline">
+                <input type="number" id="typeNumber" class="form-control" />
+                <label class="form-label" for="typeNumber">Number input</label>
+            </div> -->
+
+            <div class="col-md-6 form-group">
+            <label class="col-md-4 control-label">Weekly Hours</label>  
+                <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                    <input name="weekly_hours" placeholder="Weekly Hours" id="weekly_hours" class="form-control" type="number">
+                </div>
+            </div>
+            </div>
+
+            <!-- End Reason Text input-->
+
+            <div class="col-md-6 form-group">
+            <label class="col-md-4 control-label">End Reason</label>  
+                <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-remove"></i></span>
+                    <input name="end_reason" placeholder="End Reason" class="form-control"  type="text">
+                </div>
+            </div>
+            </div>
+
+
+            <!-- Insert Date Text input-->    
+            <div class="col-md-6 form-group">
+                <label class="col-md-4 control-label" for="date">Insert Date</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        <input name="insert_date" placeholder="Insert Date" class="form-control" id="insert_date" type="date">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Update Date Text input-->    
+            <div class="col-md-6 form-group">
+                <label class="col-md-4 control-label" for="date">Update Date</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        <input name="update_date" placeholder="Update Date" class="form-control" id="update_date" type="date">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Steuer Id Text input-->
+            <div class="col-md-6 form-group">
+                <label class="col-md-4 control-label">Steuer Id</label>  
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-qrcode"></i></span>
+                        <input name="steuer_id" placeholder="Steuer Identification" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insert By Text input-->
+
+            <div class="col-md-6 form-group">
+                <label class="col-md-4 control-label">Insert By</label>  
+                    <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="insert_by" placeholder="Insert By" class="form-control" value="system" type="text" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success message -->
+            <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> The new staff member has been created succefully!!.</div>
+
+            <!-- Button -->
+            <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-12" style="display: flex; justify-content: center;margin-top: 15px">
+                <button type="submit" class="btn-create-member" >Create new member <span class="glyphicon glyphicon-send"></span></button>
+            </div>
+            </div>
+
+            </fieldset>
+        </form>
+    </div><!-- /.container -->
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <script src="../js/form.js"></script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Arvo', serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+#success_message{ display: none;}
+
+.btn-create-member {
+    background-color: #f7f7f7;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    box-shadow: #000000 4px 4px 0 0;
+    color: #0e0e0e;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0px 14px;
+    line-height: 38px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.well {
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px !important;
+    border-radius: 8px !important;
+}
